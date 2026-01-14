@@ -34,7 +34,7 @@ Strong seasonal and diurnal patterns
 High volatility and sudden pollution spikes
 
 ## Methodology
-# Data Preprocessing and Feature Engineering
+### Data Preprocessing and Feature Engineering
 
 Handling missing values
 
@@ -44,7 +44,7 @@ Creation of time-based features such as hour of day, day of week, and seasonal i
 
 Sequence generation using a 60-hour lookback window for LSTM input
 
-# Exploratory Data Analysis
+### Exploratory Data Analysis
 
 Analysis of hourly, daily, and seasonal pollution trends
 
@@ -52,7 +52,7 @@ Identification of peak pollution periods
 
 Visualization of long-term pollution behavior using interactive plots
 
-# Modeling
+### Modeling
 
 Model: Long Short-Term Memory (LSTM)
 
@@ -62,7 +62,7 @@ Separate models trained for PM2.5 and O3
 
 Designed to capture both short-term fluctuations and long-term temporal patterns
 
-# Evaluation Strategy
+### Evaluation Strategy
 
 As this is a regression-based time series problem, model performance was evaluated using:
 
