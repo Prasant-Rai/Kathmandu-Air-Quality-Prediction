@@ -2,13 +2,13 @@
 
 ## Overview
 Kathmandu faces severe air quality challenges due to traffic congestion, construction activity, seasonal weather patterns, and its bowl-shaped topography that traps pollutants.  
-This project focuses on forecasting **hourly PM2.5 and O3 (ozone) concentrations** using a Long Short-Term Memory (LSTM) neural network to capture temporal dependencies in air pollution data.
+This project focuses on forecasting **hourly PM2.5 concentrations** using a Long Short-Term Memory (LSTM) neural network to capture temporal dependencies in air pollution data.
 
 ---
 
 ## Problem Statement
 Air quality forecasting is inherently difficult due to strong seasonality, sudden pollution spikes, and non-linear behavior driven by both human activity and meteorological conditions.  
-The objective of this project is to build a time-series forecasting model that can predict short-term PM2.5 and O3 levels in Kathmandu to support public health awareness and urban planning initiatives.
+The objective of this project is to build a time-series forecasting model that can predict short-term PM2.5 levels in Kathmandu to support public health awareness and urban planning initiatives.
 
 ---
 
@@ -19,8 +19,7 @@ The objective of this project is to build a time-series forecasting model that c
 - **Total Records**: 60,779  
 
 ### Target Variables
-- PM2.5 (µg/m³)  
-- O3 (ppm)  
+- PM2.5 (µg/m³)    
 
 ### Key Challenges
 - Missing and inconsistent readings  
@@ -45,13 +44,13 @@ The objective of this project is to build a time-series forecasting model that c
 ### Modeling
 - Model: Long Short-Term Memory (LSTM)  
 - Framework: Keras (TensorFlow backend)  
-- Separate models trained for PM2.5 and O3  
+- Separate models trained for PM2.5  
 - Designed to capture both short-term fluctuations and long-term temporal patterns  
 
 ### Evaluation Strategy
 As this is a regression-based time series problem, model performance was evaluated using:
 - Mean Absolute Error (MAE)  
-- Mean Squared Error (MSE)  
+- Root Mean Squared Error (MSE)  
 - R² Score  
 
 Model results were compared against a naive persistence baseline to assess predictive improvement.
@@ -60,11 +59,11 @@ Model results were compared against a naive persistence baseline to assess predi
 
 ## Results
 
-| Metric | PM2.5 | O3 |
-|------|------|----|
-| R² Score | 0.34 | 0.29 |
-| MSE | 1284.2 | 0.0021 |
-| MAE | 25.7 | 0.031 |
+| Metric | PM2.5 | 
+|------|------|
+| R² Score | 0.34 | 
+| RMSE | 15.38 | 
+| MAE | 9.78 | 
 
 ### Interpretation
 Air pollution levels in Kathmandu are influenced by complex and often unpredictable external factors. Despite this, the LSTM model successfully captures temporal trends and outperforms naive baseline approaches, particularly for PM2.5 prediction.
@@ -73,8 +72,7 @@ Air pollution levels in Kathmandu are influenced by complex and often unpredicta
 
 ## Key Insights
 - Peak PM2.5 concentrations occur during winter mornings between 8 AM and 10 AM  
-- Pollution severity shows strong seasonal dependence  
-- O3 prediction is more challenging due to photochemical atmospheric processes  
+- Pollution severity shows strong seasonal dependence    
 
 ---
 
